@@ -1,4 +1,3 @@
-
 -- LEADER
 vim.g.mapleader = " "
 
@@ -16,7 +15,7 @@ vim.api.nvim_set_keymap('n', '<Leader>jj', '<C-w>h', { silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>kk', '<C-w>j', { silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>ll', '<C-w>k', { silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>;;', '<C-w>l', { silent = true })
- 
+
 
 -- NAVIGATION KEYS VISUAL MODE
 vim.api.nvim_set_keymap('v', ';', 'l', { noremap = true })
@@ -26,8 +25,9 @@ vim.api.nvim_set_keymap('v', 'j', 'h', { noremap = true })
 
 -- MOVE
 vim.keymap.set("v", "K", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "L", ":m '>-1<CR>gv=gv")
+vim.keymap.set("v", "L", ":m '>-2<CR>gv=gv")
+
+vim.keymap.set("n", "<leader>ii", "%")
 
 -- COPY
-vim.keymap.set("v", "y", "\"y")
-
+vim.keymap.set("v", "y", "\"+y")
