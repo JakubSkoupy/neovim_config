@@ -107,4 +107,14 @@ return require('packer').startup(function(use)
     -- nord fox
     use "EdenEast/nightfox.nvim"
     use 'AlexvZyl/nordic.nvim'
+    use({
+        'projekt0n/github-nvim-theme',
+        config = function()
+            require('github-theme').setup({
+                -- ...
+            })
+
+            vim.cmd('colorscheme github_dark')
+        end
+    })
 end)
